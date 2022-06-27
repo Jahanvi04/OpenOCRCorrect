@@ -70,7 +70,11 @@ public:
     QAction *actionSanskrit;
     QAction *actionHindi;
     QAction *actionEnglish;
+    QAction *actionBold;
+    QAction *actionSuper;
+    QAction *actionSub;
     QWidget *centralWidget;
+    
     QVBoxLayout *verticalLayout;
     QProgressBar *progressBar;
     QLineEdit *lineEdit;
