@@ -2429,3 +2429,48 @@ void MainWindow::on_actionEnglish_triggered()
 {
     HinFlag = 0 , SanFlag = 0;
 }
+
+
+void MainWindow::on_actionBold_triggered()
+{
+    QTextCursor cursor = ui->textBrowser->textCursor();
+       QTextCharFormat format;
+       if(!cursor.charFormat().font().bold())
+       {
+            format.setFontWeight(QFont::Bold);
+            cursor.mergeCharFormat(format);
+       }
+       else
+       {
+           format.setFontWeight(400);
+           cursor.mergeCharFormat(format);
+       }
+}
+
+
+void MainWindow::on_actionSuperscript_triggered()
+{
+    QTextCursor cursor=ui->textBrowser->textCursor();
+        int StartPos=cursor.selectionStart();
+        int EndPos=cursor.selectionEnd();
+        cursor.setPosition(StartPos, QTextCursor::MoveAnchor);
+        cursor.setPosition(EndPos, QTextCursor::KeepAnchor);
+        QString word =cursor.selectedText();
+        cursor.removeSelectedText();
+        QString s="<sup>"+word+"</sup>";
+        cursor.insertHtml(s);
+}
+
+
+void MainWindow::on_actionSubscript_triggered()
+{
+    QTextCursor cursor=ui->textBrowser->textCursor();
+    int StartPos=cursor.selectionStart();
+    int EndPos=cursor.selectionEnd();
+    cursor.setPosition(StartPos, QTextCursor::MoveAnchor);
+    cursor.setPosition(EndPos, QTextCursor::KeepAnchor);
+    QString word =cursor.selectedText();
+    cursor.removeSelectedText();
+    QString s="<sub>"+word+"</sub>";
+    cursor.insertHtml(s);
+}
