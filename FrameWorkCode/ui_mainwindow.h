@@ -180,6 +180,17 @@ public:
         actionHindi->setObjectName(QStringLiteral("actionHindi"));
         actionEnglish = new QAction(MainWindow);
         actionEnglish->setObjectName(QStringLiteral("actionEnglish"));
+        
+        actionBold = new QAction(MainWindow);
+        actionBold->setObjectName(QString::fromUtf8("actionBold"));
+       
+        actionSuperscript = new QAction(MainWindow);
+        actionSuperscript->setObjectName(QString::fromUtf8("actionSuper"));
+       
+        actionSubscript = new QAction(MainWindow);
+        actionSubscript->setObjectName(QString::fromUtf8("actionSub"));
+       
+        
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         verticalLayout = new QVBoxLayout(centralWidget);
@@ -415,6 +426,7 @@ public:
         menuConvertFiles->setTitle(QApplication::translate("MainWindow", "ConvertFiles", 0));
         menuFeatureExtraction->setTitle(QApplication::translate("MainWindow", "FeatureExtraction", 0));
         menuSelectLanguage->setTitle(QApplication::translate("MainWindow", "SelectLanguage", 0));
+        menuFont->setTitle(QCoreApplication::translate("MainWindow", "Font", nullptr));
     } // retranslateUi
 
 };
