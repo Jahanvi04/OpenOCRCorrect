@@ -490,6 +490,21 @@ p, li { white-space: pre-wrap; }
     <string>English</string>
    </property>
   </action>
+   <action name="actionBold">
+   <property name="text">
+    <string>Bold</string>
+   </property>
+  </action>
+  <action name="actionSuper">
+   <property name="text">
+    <string>Superscript</string>
+   </property>
+  </action>
+  <action name="actionSub">
+  <property name="text">
+    <string>Subscript</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <tabstops>
