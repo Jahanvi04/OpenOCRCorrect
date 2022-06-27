@@ -148,9 +148,9 @@ private slots:
     
     void on_actionBold_triggered();
 
-    void on_actionSuperscript_triggered();
+    void on_actionSuper_triggered();
 
-    void on_actionSubscript_triggered();
+    void on_actionSub_triggered();
 
 private:
     Ui::MainWindow *ui;
