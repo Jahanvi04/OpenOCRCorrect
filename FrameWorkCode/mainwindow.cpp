@@ -2448,7 +2448,7 @@ void MainWindow::on_actionBold_triggered()
 }
 
 
-void MainWindow::on_actionSuperscript_triggered()
+void MainWindow::on_actionSuper_triggered()
 {
     QTextCursor cursor=ui->textBrowser->textCursor();
         int StartPos=cursor.selectionStart();
@@ -2462,7 +2462,7 @@ void MainWindow::on_actionSuperscript_triggered()
 }
 
 
-void MainWindow::on_actionSubscript_triggered()
+void MainWindow::on_actionSub_triggered()
 {
     QTextCursor cursor=ui->textBrowser->textCursor();
     int StartPos=cursor.selectionStart();
